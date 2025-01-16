@@ -1,8 +1,9 @@
-jenkins-shared-library/
-├── vars/
-│   ├── greetUser.groovy
-├── src/
-│   └── com/
-│       └── example/
-│           └── MathUtils.groovy
-└── README.md
+stage('Greet User') {
+    steps {
+        script {
+            // Calling greetUser function from the vars directory in the shared library
+            greetUser('Gowtham')
+        }
+    }
+}
+
